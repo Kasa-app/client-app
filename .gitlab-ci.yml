@@ -1,0 +1,12 @@
+image: node:18.17.1
+
+stages:
+  - test
+
+before_script:
+  - npm install
+
+test:
+  stage: test
+  script:
+    - npm run test
