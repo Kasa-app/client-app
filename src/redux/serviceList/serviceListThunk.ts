@@ -1,5 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { getCategoriesData } from "../../services/ManagementService";
+import { getCategoriesData } from "../../services/ManagementDataService";
 
 export const fetchServiceList = createAsyncThunk('serviceList/fetchServiceList', async (numCategorie:string) => {
     try {

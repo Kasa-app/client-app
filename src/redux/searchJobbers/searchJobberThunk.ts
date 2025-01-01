@@ -1,5 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { searchJobber } from "../../services/ManagementService";
+import { searchJobber } from "../../services/ManagementDataService";
 
 export const fetchJobber = createAsyncThunk('searchJobber/fetchJobber', async (dataQuery: any) => {
     try {

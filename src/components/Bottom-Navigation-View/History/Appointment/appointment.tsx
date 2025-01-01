@@ -1,6 +1,6 @@
 import useQuery from "../../../../hooks/useQuery";
 import { GetAppointmentResponse } from "../../../../models/apiResponse/GetAppointmentResponse";
-import { getServiceDetails } from "../../../../services/ManagementService";
+import { getServiceDetails } from "../../../../services/ManagementDataService";
 import AppointmentView from "./appointment-view";
 
 type Props = {

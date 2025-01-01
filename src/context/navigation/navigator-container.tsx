@@ -25,6 +25,7 @@ export const NavigatorContainer = () => {
                     animation: 'slide_from_bottom',
                     animationDuration: 200
                 }}
+                initialRouteName='LaunchScreen'
             >
                 <Stack.Screen name="LaunchScreen" component={LaunchPage} />
                 <Stack.Screen name="StartupScreen" component={StartupPage} />

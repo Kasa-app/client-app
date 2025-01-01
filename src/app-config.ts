@@ -1,9 +1,13 @@
 import { initializeApp } from 'firebase/app';
 import '@firebase/auth';
 import '@firebase/firestore';
-import { getFirestore,Firestore, initializeFirestore  } from 'firebase/firestore';
+import { initializeFirestore  } from 'firebase/firestore';
 
-const AUTHENTIFICATION = {
+
+const BASE_URL= "https://silkworm-gorgeous-unduly.ngrok-free.app/";
+
+
+/*const AUTHENTIFICATION = {
 	BASE_URL: "http://10.0.2.2/authentification-service/",
 
 	api: {
@@ -13,25 +17,24 @@ const AUTHENTIFICATION = {
 		loginClient: 'api/authentification/loginClient',
 		validateCLientEmailExists: 'api/authentification/validateClientEmailExists',
 	}
-};
+};*/
 
-const MANAGEMENT = {
-	BASE_URL: "http://10.0.2.2/management-service/",
+const MANAGEMENT_DATA = {
 	api: {
-		getServiceDetails: 'api/data/serviceDetails',
-		getCategoriesData: 'api/data/categories',
-		getHomePageData: 'api/data/accueil',
-		searchJobber: 'api/data/searchJobber',
+		getServiceDetails: 'api/managementData/serviceDetails',
+		getCategoriesData: 'api/ManagementData/categories',
+		getHomePageData: 'api/ManagementData/GetHomePageData',
+		searchJobber: 'api/ManagementData/searchJobber',
 	}
 };
 
-const AGENDA = {
+/*const AGENDA = {
 	BASE_URL: "http://10.0.2.2/agenda-service",
 	api: {
 		addAppointment: '/api/v1/agenda/rendezVous',
 		getAppointment: '/api/v1/agenda/rendezVous'
 	}
-};
+};*/
 
 //config temporaire, sera déplacé éventuellement déplacé vers l'un de nos microservices @TODO KS-184
 
@@ -58,9 +61,8 @@ initializeFirestore(firebaseapp, {experimentalForceLongPolling: true});
 };
 
 export {
-	AUTHENTIFICATION,
-	AGENDA,
-	MANAGEMENT,
+	BASE_URL,
+	MANAGEMENT_DATA,
 	requestHeaders,
 	firebaseapp,
 	GOOGLE_CONFIG
